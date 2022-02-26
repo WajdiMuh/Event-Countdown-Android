@@ -21,17 +21,12 @@
             android:layout_width="match_parent"
             android:layout_height="8dp" />
 
-        <DatePicker
-            android:id="@+id/datepicker"
+        <EditText
+            android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:datePickerMode="spinner"
-            android:calendarViewShown="false" />
-        <TimePicker
-            android:id="@+id/timepicker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:timePickerMode="spinner" />
+            android:hint="Date"
+            />
 
         <Space
             android:layout_width="match_parent"

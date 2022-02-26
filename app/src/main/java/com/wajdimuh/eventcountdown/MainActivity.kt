@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.github.kittinunf.fuel.core.FuelManager
 import com.wajdimuh.eventcountdown.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FuelManager.instance.basePath = "https://eventcountdown.herokuapp.com";
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

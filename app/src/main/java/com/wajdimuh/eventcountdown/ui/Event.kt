@@ -1,10 +1,12 @@
 package com.wajdimuh.eventcountdown.ui
+import com.wajdimuh.eventcountdown.DateTimeSerializer
+import kotlinx.serialization.Serializable
+import org.joda.time.DateTime
 
-import java.util.*
-
+@Serializable
 data class Event(
         val id:Int,
         val title:String,
-        val date: Date
-    ){
-}
+        @Serializable(with = DateTimeSerializer::class)
+        val date: DateTime
+    )

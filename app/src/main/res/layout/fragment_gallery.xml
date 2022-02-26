@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/swiperefresh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-
-    <com.aitsuki.swipe.SwipeMenuRecyclerView
-        android:id="@+id/eventlist"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
+        <com.aitsuki.swipe.SwipeMenuRecyclerView
+            android:id="@+id/eventlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:fillViewport="true"
+            android:orientation="vertical" />
 
-    </com.aitsuki.swipe.SwipeMenuRecyclerView>
+        <include
+            android:id="@+id/loading"
+            layout="@layout/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            tools:visibility="gone" />
+    </RelativeLayout>
 
 
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
